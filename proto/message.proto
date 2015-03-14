@@ -1,0 +1,17 @@
+package com.wlanadb.data;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "com.wlanadb.data";
+option java_outer_classname = "MessageProto";
+
+import "client.proto";
+
+message Message {
+  enum Type {
+    REQEST = 0;
+    RESPONSE = 1;
+  }
+
+  required Type type = 1;
+  optional Client client = 2;
+}
